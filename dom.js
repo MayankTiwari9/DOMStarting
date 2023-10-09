@@ -28,7 +28,7 @@
 // header.style.borderBottom = 'solid 3px black';
 
 //GETELEMENTSBYCLASSNAME
-var items = document.getElementsByClassName('list-group-item');
+// var items = document.getElementsByClassName('list-group-item');
 // console.log(items);
 // console.log(items[1]);
 // items[1].textContent = 'Hello 2';
@@ -42,13 +42,11 @@ var items = document.getElementsByClassName('list-group-item');
 //   items[i].style.backgroundColor = '#f4f4f4';
 // }
 
-items[2].style.backgroundColor = 'green';
+// items[2].style.backgroundColor = 'green';
 
-for(var i = 0; i<items.length;i++){
-  items[i].style.fontWeight = 'bold';
-}
-
-
+// for(var i = 0; i<items.length;i++){
+//   items[i].style.fontWeight = 'bold';
+// }
 
 // var titleElements = document.getElementsByClassName("title");
 
@@ -58,3 +56,31 @@ for(var i = 0; i<items.length;i++){
 //     element.style.fontWeight = "bold";
 //     element.style.color = "green";
 //   }
+
+//GETELEMENTBYTGNAME
+// var li = document.getElementsByTagName('li');
+// console.log(li);
+// console.log(li[1]);
+// li[1].textContent = 'Hello 2';
+// li[1].style.fontWeight = 'bold';
+// li[1].style.backgroundColor = 'yellow';
+
+// // Gives Error
+// // li.style.backgroundColor = '#f4f4f4';
+
+// for(var i = 0; i<li.length;i++){
+//   li[i].style.backgroundColor = '#f4f4f4';
+// }
+
+
+//Changing all the li elements along with new li tag 
+var li = document.getElementsByTagName('li');
+for(var i = 0; i<li.length;i++){
+  li[i].style.backgroundColor = 'skyblue';
+}
+
+//All other li tags are changing but newely added li tag is not as it don't have any class like the older ones
+var list = document.getElementsByClassName('list-group-item');
+for(var i = 0; i<list.length;i++){
+  list[i].style.color = 'yellow';
+}
