@@ -114,17 +114,104 @@
 //   odd[i].style.backgroundColor = '#f4f4f4';
 // }
 
-var secondItem = document.querySelector('.list-group-item:nth-child(2)');
-secondItem.style.backgroundColor = 'green';
+// var secondItem = document.querySelector('.list-group-item:nth-child(2)');
+// secondItem.style.backgroundColor = 'green';
 
-var thirdItem = document.querySelector('.list-group-item:nth-child(3)');
-thirdItem.style.display = 'none  ';
+// var thirdItem = document.querySelector('.list-group-item:nth-child(3)');
+// thirdItem.style.display = 'none  ';
 
-var second = document.querySelectorAll('.list-group-item');
-second[1].style.color = 'green';
+// var second = document.querySelectorAll('.list-group-item');
+// second[1].style.color = 'green';
 
-var odd = document.querySelectorAll('li:nth-child(odd)'); 
+// var odd = document.querySelectorAll('li:nth-child(odd)'); 
 
-for(var i = 0; i<odd.length;i++){
-  odd[i].style.backgroundColor = 'green';
-}
+// for(var i = 0; i<odd.length;i++){
+//   odd[i].style.backgroundColor = 'green';
+// }
+
+//TRAVERSING THE DOM
+
+var itemList = document.querySelector('#items');
+
+//ParentNode
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor = '#f4f4f4';
+// console.log(itemList.parentNode.parentNode.parentNode);
+
+//ParntElement
+// console.log(itemList.parentElement);
+// itemList.parentElement.style.backgroundColor = '#f4f4f4';
+// console.log(itemList.parentElement.parentElement.parentElement);
+
+
+//ChildNodes
+// console.log(itemList.childNodes);
+// console.log(itemList.children);
+
+// console.log(itemList.children[1]);
+// itemList.children[1].style.backgroundColor = 'yellow';
+
+// //FirstChild
+// console.log(itemList.firstChild);
+// //firstElementChild
+// console.log(itemList.firstElementChild);
+// itemList.firstElementChild.textContent = 'Hello 1';
+
+//last Child
+// console.log(itemList.lastChild);
+//firstElementChild
+// console.log(itemList.lastElementChild);
+// itemList.lastElementChild.textContent = 'Hello 1';
+
+//NextSiblings
+// console.log(itemList.nextSibling);
+// //NextEleentSibling
+// console.log(itemList.nextElementSibling);
+
+//PrevSibling
+// console.log(itemList.previousSibling);
+// //PrevElementSibling
+// console.log(itemList.previousElementSibling);
+// itemList.previousElementSibling.style.color = 'green';
+
+//Create Element
+
+//Create a div
+
+var newdiv = document.createElement('div');
+
+//Add class
+newdiv.className = 'hello';
+
+//Add id
+newdiv.id = 'hello1';
+
+//Add atr
+newdiv.setAttribute('title', 'Hello Div');
+
+//Create text node
+var newDivText = document.createTextNode('Hello');
+
+//add text to div
+
+newdiv.appendChild(newDivText);
+
+var container = document.querySelector('header .container');
+var h1 = document.querySelector('header h1');
+
+newdiv.style.fontSize = '30px';
+
+container.insertBefore(newdiv, h1);
+
+//Creating befor item 1
+var newDiv2 = document.createElement('div');
+newDiv2.className = 'hello2';
+
+var newDiv2Text = document.createTextNode('Hello');
+newDiv2.appendChild(newDiv2Text);
+
+console.log(newDiv2);
+
+var container2 = document.querySelector('ul');
+var h2 = document.querySelector('ul li');
+container2.insertBefore(newDiv2, h2);
